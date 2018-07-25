@@ -39,6 +39,9 @@
                                     <constraint firstAttribute="width" constant="100" id="A8q-Gh-zpC"/>
                                 </constraints>
                                 <state key="normal" image="offBtn"/>
+                                <connections>
+                                    <action selector="toggleBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lyU-Pb-2yV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -57,7 +60,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+            <point key="canvasLocation" x="-206" y="116"/>
         </scene>
     </scenes>
     <resources>

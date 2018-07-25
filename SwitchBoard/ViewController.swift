@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet var onOffBtn: UIButton!
     @IBOutlet var onOffLbl: UILabel!
     
+    var switchStatus = SwitchStatus.off
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,7 +23,22 @@ class ViewController: UIViewController {
 
     
    
-
+    @IBAction func toggleBtnPressed(_ sender: Any) {
+        switchStatus.toggle()
+        if switchStatus == .off {
+            view.backgroundColor = #colorLiteral(red: 0.370555222, green: 0.3705646992, blue: 0.3705595732, alpha: 1)
+            onOffBtn.setImage(UIImage(named: "offBtn"), for: .normal)
+            onOffLbl.text = "🌚 OFF 🌚"
+            onOffLbl.textColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
+        }else{
+            view.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
+            onOffLbl.text = "🌝 ON 🌝"
+            onOffBtn.setImage(UIImage(named:"onBtn"), for: .normal)
+            onOffLbl.textColor = #colorLiteral(red: 0.370555222, green: 0.3705646992, blue: 0.3705595732, alpha: 1)
+        }
+        
+    }
+    
 
 }
 
